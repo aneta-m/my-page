@@ -1,0 +1,11 @@
+.nav_list {
+  display: flex;
+  list-style-type: none;
+}
+.link {
+  text-decoration: none;
+  padding: 1rem;
+}
+.link_active {
+  color: red;
+}

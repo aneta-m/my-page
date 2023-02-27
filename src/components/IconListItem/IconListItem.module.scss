@@ -1,0 +1,23 @@
+.list_item {
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  //   align-items: center;
+  margin-bottom: 0.5rem;
+  margin-left: 30%;
+  transform: translateX(-20%);
+}
+
+.img {
+  width: 21px;
+  border-radius: 2px;
+}
+
+.icon {
+  width: 1.5rem;
+  font-size: 1.5rem;
+}
+
+i {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}

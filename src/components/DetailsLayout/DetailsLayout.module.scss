@@ -1,0 +1,10 @@
+.text {
+  margin-bottom: 1rem;
+}
+
+.buttons {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  gap: 1rem;
+}

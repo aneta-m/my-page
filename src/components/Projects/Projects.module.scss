@@ -1,0 +1,11 @@
+@import "../../styles/main.scss";
+
+.projects_section {
+  background-color: white;
+  padding: 2rem 0;
+}
+
+.projects {
+  max-width: $container-size-s;
+  margin: auto;
+}

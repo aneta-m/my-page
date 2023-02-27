@@ -2,7 +2,15 @@
 
 .logo {
   font-family: $logo-font-family;
-  font-size: 2rem;
+  font-size: 4rem;
   text-decoration: none;
-  color: $dark-color;
+  color: $dark;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0 1rem;
+  transition: all 0.25s ease-in;
+  &:hover {
+    text-shadow: 0 0 1px $dark;
+  }
 }

@@ -1,4 +1,11 @@
+@import "../../styles/main.scss";
+
 .contact {
-  height: 100vh;
-  background-color: lightcoral;
+  background-color: $primary;
+}
+
+.container {
+  padding: 2rem 0 4rem;
+  width: $container-size;
+  margin: auto;
 }

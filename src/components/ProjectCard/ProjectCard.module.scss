@@ -1,0 +1,19 @@
+@import "../../styles/main.scss";
+
+.flex {
+  display: flex;
+  & > *:first-child {
+    width: 40%;
+  }
+  & > *:nth-child(2) {
+    width: 60%;
+  }
+  padding-bottom: 4rem;
+}
+
+.media_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 2rem;
+}

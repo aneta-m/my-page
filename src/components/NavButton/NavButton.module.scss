@@ -1,0 +1,32 @@
+@import "../../styles/main.scss";
+
+.button {
+  text-decoration: none;
+  padding: 1rem;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  transition: all 0.25s ease-in;
+
+  &::after {
+    transition: all 0.25s ease-in;
+    display: block;
+    content: "";
+    background-color: $primary;
+    width: 0;
+    height: 2px;
+    position: absolute;
+    bottom: 0.75rem;
+    left: 50%;
+  }
+
+  &:hover {
+    text-shadow: 0 0 0.5px $dark;
+    &::after {
+      width: calc(100% - 1rem);
+      box-shadow: 1px 0 1px $primary;
+      transform: translateX(-50%);
+    }
+  }
+}

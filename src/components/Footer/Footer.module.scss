@@ -1,4 +1,38 @@
+@import "../../styles/main.scss";
+
 .footer {
-  height: 30vh;
-  background-color: grey;
+  background-color: $dark;
+  color: $grey;
+  text-align: center;
+}
+
+.container {
+  padding: 2rem 0 0;
+  width: $container-size-s;
+  margin: auto;
+}
+
+.links {
+  .link {
+    display: inline-block;
+    &:first-child {
+      margin-right: 1rem;
+    }
+  }
+  i {
+    color: $grey;
+
+    font-size: 1.5rem;
+    transition: all 0.5s ease;
+
+    &:hover {
+      color: white;
+      text-shadow: 1px 0 1px;
+    }
+  }
+}
+
+.copyright {
+  padding: 1rem;
+  font-size: 0.75rem;
 }

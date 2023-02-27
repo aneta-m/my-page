@@ -1,11 +1,25 @@
+@import "../../styles/main.scss";
+
+.nav {
+  margin: auto;
+  padding: 0;
+  box-shadow: $box-shadow;
+  background-color: white;
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  top: 0;
+}
 .nav_list {
+  max-width: 1200px;
   display: flex;
   list-style-type: none;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0;
+  margin: auto;
 }
-.link {
-  text-decoration: none;
-  padding: 1rem;
-}
-.link_active {
-  color: red;
+
+.logo {
+  margin-right: auto;
 }

@@ -1,8 +1,17 @@
-$primary-color: rgb(237, 231, 228);
-$light-color: rgb(215, 209, 206);
-$grey: rgb(167, 165, 163);
-$dark-color: rgb(38, 36, 36);
+$primary: rgb(233, 231, 229);
+$grey: rgb(177, 173, 173);
+$dark: rgb(38, 36, 36);
+$accent-color: rgb(153, 138, 126);
 
 $logo-font-family: "Tulpen One", cursive;
 $header-font-family: "Wire One", sans-serif;
 $primary-font-family: "Noto Sans", sans-serif;
+
+$container-size: 1400px;
+$container-size-s: 1200px;
+$box-shadow: 2px 0 4px $dark;
+
+$small-breakpoint: 768px;
+$medium-breakpoint: 1024px;
+$large-breakpoint: 1280px;
+$x-large-breakpoint: 1536px;

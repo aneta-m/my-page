@@ -1,28 +1,29 @@
 import React from "react";
 import Logo from "../Logo/Logo";
+import NavButton from "../NavButton/NavButton";
 import styles from "./Nav.module.scss";
 
 const Nav = ({ onClick }: { onClick: { (sectionId: string): void } }) => {
   return (
-    <nav>
+    <nav className={styles.nav}>
       <ul className={styles.nav_list}>
-        <li>
+        <li className={styles.logo}>
           <Logo />
         </li>
         <li>
-          <button className={styles.link} onClick={(e) => onClick("about")}>
+          <NavButton onClick={onClick} sectionId="about">
             About
-          </button>
+          </NavButton>
         </li>
         <li>
-          <button className={styles.link} onClick={(e) => onClick("portfolio")}>
-            Portfolio
-          </button>
+          <NavButton onClick={onClick} sectionId="projects">
+            Projects
+          </NavButton>
         </li>
         <li>
-          <button className={styles.link} onClick={(e) => onClick("contact")}>
+          <NavButton onClick={onClick} sectionId="contact">
             Contact
-          </button>
+          </NavButton>
         </li>
       </ul>
     </nav>

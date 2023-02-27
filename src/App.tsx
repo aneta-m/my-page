@@ -4,7 +4,9 @@ import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Nav from "./components/Nav/Nav";
-import Portfolio from "./components/Portfolio/Portfolio";
+import Projects from "./components/Projects/Projects";
+import styles from "./App.module.scss";
+import FixedSidebar from "./components/FixedSidebar/FixedSidebar";
 
 const App = () => {
   const [targetElement, setTargetElement] = useState<{
@@ -22,20 +24,28 @@ const App = () => {
 
   const navigateToSection = (sectionId: string) => {
     const sectionElement = targetElement ? targetElement[sectionId] : null;
-    sectionElement && sectionElement.scrollIntoView({ behavior: "smooth" });
+    const navOffset = sectionId === "about" ? 124 : 74;
+    const scrollTopValue =
+      sectionElement &&
+      sectionElement.getBoundingClientRect().top +
+        window.pageYOffset -
+        navOffset;
+    scrollTopValue &&
+      window.scrollTo({ top: scrollTopValue, behavior: "smooth" });
   };
 
   return (
-    <>
+    <div className={styles.app}>
       <Nav onClick={navigateToSection} />
       <Header />
       <main>
         <About />
-        <Portfolio />
+        <Projects />
         <Contact />
       </main>
       <Footer />
-    </>
+      <FixedSidebar />
+    </div>
   );
 };
 

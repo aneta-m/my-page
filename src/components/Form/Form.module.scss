@@ -1,0 +1,47 @@
+@import "../../styles/main.scss";
+
+.form {
+  display: grid;
+  grid-template-areas:
+    "a b"
+    "c c"
+    "d d";
+  gap: 1rem;
+
+  & > :first-child {
+    grid-area: a;
+  }
+  & > :nth-child(2) {
+    grid-area: b;
+  }
+  & > :nth-child(3) {
+    grid-area: c;
+  }
+}
+
+.submit {
+  text-align: center;
+  grid-area: d;
+  justify-self: center;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.5s ease;
+  background-color: $primary;
+  color: $dark;
+  &:hover {
+    color: white;
+    background-color: $dark;
+  }
+}
+
+.confirmation {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}

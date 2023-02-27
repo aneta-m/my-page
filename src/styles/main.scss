@@ -1,1 +1,11 @@
 @import "./abstracts/variables.scss";
+
+html {
+  font-size: 16px;
+  @media (min-width: $large-breakpoint) {
+    font-size: 18px;
+  }
+  @media (min-width: $large-breakpoint) {
+    font-size: 20px;
+  }
+}

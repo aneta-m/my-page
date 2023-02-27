@@ -1,0 +1,2 @@
+1. menu - windowresize - hamburger menu
+2. header - max wysokość do głowy na dużym ekranie? (max-height w px)

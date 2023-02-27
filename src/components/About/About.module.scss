@@ -1,4 +1,30 @@
+@import "../../styles/main.scss";
+
 .about {
-  background-color: lightgreen;
-  height: 100vh;
+  background-color: $primary;
+  padding-bottom: 2rem;
+}
+
+.card_wrapper {
+  transform: translateY(-50px);
+}
+
+.content {
+  margin-bottom: 1rem;
+}
+
+.text {
+  margin-bottom: 2rem;
+}
+
+.paragraph {
+  text-align: center;
+  line-height: 1.5;
+}
+
+.list,
+.text {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }

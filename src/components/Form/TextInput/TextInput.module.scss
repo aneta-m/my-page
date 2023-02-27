@@ -1,0 +1,32 @@
+@import "../../../styles/main.scss";
+
+.input {
+  width: 100%;
+  border: 1px solid $primary;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  line-height: 1.5;
+
+  &:focus {
+    box-shadow: 4px 0 8px $primary;
+  }
+}
+
+.textarea {
+  @extend .input;
+  resize: none;
+  overflow: auto;
+}
+
+.label {
+  color: $dark;
+  display: block;
+}
+
+.error_warning {
+  color: rgb(118, 1, 1);
+  font-size: 0.8rem;
+}
+
+.error_hidden {
+}

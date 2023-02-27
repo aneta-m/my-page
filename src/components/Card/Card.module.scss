@@ -1,0 +1,17 @@
+@import "../../styles/main.scss";
+
+.card {
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 2px 0 6px grey;
+  max-width: $container-size-s;
+  margin: auto;
+  padding: 2rem;
+}
+
+.simple {
+  box-shadow: none;
+  border-radius: 0;
+  background-color: white;
+  border: 2px solid $primary;
+}

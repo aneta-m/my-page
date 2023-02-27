@@ -1,0 +1,23 @@
+@import "../../styles/main.scss";
+.list {
+  padding-left: 0.5rem;
+}
+
+.item {
+  padding: 0.25rem 0 0.25rem 1rem;
+  display: block;
+  position: relative;
+  line-height: 1.5;
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0.5rem;
+    height: 0.6rem;
+    width: 0.25rem;
+    border-right: 1px solid $dark;
+    border-bottom: 1px solid $dark;
+    left: -0.25rem;
+    transform: rotate(55deg) skewX(10deg);
+  }
+}

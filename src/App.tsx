@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import LanguageContext from "./LanguageContext";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
@@ -7,91 +8,41 @@ import Nav from "./components/Nav/Nav";
 import Projects from "./components/Projects/Projects";
 import styles from "./App.module.scss";
 import FixedSidebar from "./components/FixedSidebar/FixedSidebar";
+import useScrollToSection from "./hooks/useScrollToSection";
+import useWindowResize from "./hooks/useWindowResize";
+import MobileNav from "./components/MobileNav/MobileNav";
 
 const App = () => {
-  const [targetElement, setTargetElement] = useState<{
-    [key: string]: HTMLElement;
-  } | null>(null);
-
-  useEffect(() => {
-    const sections = document.querySelectorAll("section");
-    const sectionElements: { [key: string]: HTMLElement } = {};
-    sections.forEach((section) => {
-      sectionElements[section.id] = section;
-    });
-    setTargetElement(sectionElements);
-  }, []);
-
-  const navigateToSection = (sectionId: string) => {
-    const sectionElement = targetElement ? targetElement[sectionId] : null;
-    const navOffset = sectionId === "about" ? 124 : 74;
-    const scrollTopValue =
-      sectionElement &&
-      sectionElement.getBoundingClientRect().top +
-        window.pageYOffset -
-        navOffset;
-    scrollTopValue &&
-      window.scrollTo({ top: scrollTopValue, behavior: "smooth" });
+  const getInitialLanguage: () => string = () => {
+    const data = window.localStorage.getItem("lang");
+    if (data) {
+      return data;
+    }
+    return "en";
   };
+  const [language, setLanguage] = useState<string>(getInitialLanguage);
+  const isMobile = useWindowResize();
+  const navigateToSection = useScrollToSection();
 
   return (
-    <div className={styles.app}>
-      <Nav onClick={navigateToSection} />
-      <Header />
-      <main>
-        <About />
-        <Projects />
-        <Contact />
-      </main>
-      <Footer />
-      <FixedSidebar />
-    </div>
+    <LanguageContext.Provider value={{ language, setLanguage }}>
+      <div className={styles.app}>
+        {isMobile ? (
+          <MobileNav onClick={navigateToSection} />
+        ) : (
+          <Nav onClick={navigateToSection} />
+        )}
+        <Header onClick={navigateToSection} />
+        <main>
+          <About />
+          <Projects />
+          <Contact />
+        </main>
+        <Footer />
+        <FixedSidebar />
+      </div>
+    </LanguageContext.Provider>
   );
 };
-
-// const App = () => {
-//   const [targetElement, setTargetElement] = useState(null);
-
-//   useEffect(() => {
-//     const sections = document.querySelectorAll("section");
-//     const sectionElements = {};
-//     sections.forEach((section) => {
-//       sectionElements[section.id] = section;
-//     });
-//     setTargetElement(sectionElements);
-//   }, []);
-
-//   const handleNavClick = (event, sectionId) => {
-//     event.preventDefault();
-//     const sectionElement = targetElement[sectionId];
-//     sectionElement.scrollIntoView({ behavior: "smooth" });
-//   };
-
-//   return (
-
-// <Router>
-//   <nav>
-//     <ul>
-//       <li>
-//         <Link to="/" onClick={(e) => handleNavClick(e, "home")}>
-//           Home
-//         </Link>
-//       </li>
-//       <li>
-//         <Link to="/about" onClick={(e) => handleNavClick(e, "about")}>
-//           About
-//         </Link>
-//       </li>
-//     </ul>
-//   </nav>
-
-//   <Route exact path="/" component={Home} />
-//   <Route path="/about" component={About} />
-// </Router>
-//   );
-// };
-
-// const Home = () => <section id="home">Home</section>;
-// const About = () => <section id="about">About</section>;
 
 export default App;

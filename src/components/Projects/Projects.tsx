@@ -1,11 +1,14 @@
 import React from "react";
 import styles from "./Projects.module.scss";
 import ProjectCard from "../ProjectCard/ProjectCard";
-import Logo from "../Logo/Logo";
 import Heading from "../Heading/Heading";
 import Video from "../Video/Video";
+import Image from "../Image/Image";
+import useTranslation from "../../hooks/useTranslation";
+import site from "../../assets/images/site.jpg";
 
 const Projects = () => {
+  const t = useTranslation();
   const projects: {
     title: string;
     text: string;
@@ -14,17 +17,17 @@ const Projects = () => {
     media: JSX.Element;
   }[] = [
     {
-      title: "Visual Calculator",
-      text: "A calculator designed for kids, which visually demonstrates the basic mathematical operations of addition, subtraction, multiplication, and division using the representation of apples. It offers a fun and interactive way for children to learn and understand basic arithmetic concepts.",
+      title: t.projects.project_1.title,
+      text: t.projects.project_1.desc,
       list: [
-        "developed with React and TypeScript",
-        "styled with SCSS modules",
-        "tested with Jest and React Testing Library",
-        "responsive",
+        t.projects.project_1.list.item_1,
+        t.projects.project_1.list.item_2,
+        t.projects.project_1.list.item_3,
+        t.projects.project_1.list.item_4,
       ],
       links: [
-        { name: "Play with App", url: "https://www.onet.pl" },
-        { name: "Get code", url: "https://www.github.com" },
+        { name: t.projects.project_1.button_1, url: "https://www.onet.pl" },
+        { name: t.projects.project_1.button_2, url: "https://www.github.com" },
       ],
       media: (
         <Video
@@ -36,22 +39,29 @@ const Projects = () => {
       ),
     },
     {
-      title: "This website",
-      text: "A portfolio website designed as a responsive Single Page Website with all the content displayed in a scrollable format. The site includes sections for About, Projects, and Contact, where you can get in touch with me. The website is multi-lingual, allowing for switching between English and Polish language. ",
+      title: t.projects.project_2.title,
+      text: t.projects.project_2.desc,
       list: [
-        "developed with React and TypeScript",
-        "use of Context API for switching between different languages",
-        "styled with SCSS modules",
-        "tested with Jest and React Testing Library",
-        "responsive",
+        t.projects.project_2.list.item_1,
+        t.projects.project_2.list.item_2,
+        t.projects.project_2.list.item_3,
+        t.projects.project_2.list.item_4,
+        t.projects.project_2.list.item_5,
       ],
-      links: { name: "Get code", url: "https://www.github.com" },
-      media: <Logo />,
+      links: {
+        name: t.projects.project_2.button_1,
+        url: "https://www.github.com",
+      },
+      media: <Image src={site} alt="website screenshots different sizes" />,
     },
   ];
   return (
-    <section id="projects" className={styles.projects_section}>
-      <Heading type="section_title">Projects</Heading>
+    <section
+      id="projects"
+      className={styles.projects_section}
+      data-testid="projects"
+    >
+      <Heading type="section_title">{t.projects.title}</Heading>
       <div className={styles.projects}>
         {projects.map((project, index) => (
           <ProjectCard

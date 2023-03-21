@@ -1,20 +1,32 @@
 @import "../../styles/main.scss";
 
 .header {
-  height: 60vh;
+  position: relative;
 }
 
 .flex_container {
-  padding-top: calc(4rem * 1.15);
-  min-height: 70vh;
-  position: relative;
-  margin: auto;
-  display: flex;
-  justify-content: space-evenly;
+  @media screen and (min-width: 768px) {
+    padding-top: calc(4rem * 1.15);
+    position: relative;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    max-width: $container-size-s;
+  }
 }
 
 .text {
+  position: absolute;
+  bottom: 10%;
+  left: 2rem;
   align-self: center;
+  z-index: 1;
+  @media screen and (min-width: 768px) {
+    position: static;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+  }
 }
 
 .buttons {
@@ -25,8 +37,32 @@
 }
 
 .image_wrapper {
-  width: 20vw;
-  align-self: flex-start;
+  padding-left: 20vw;
+  padding-right: 5vw;
+  padding-top: 4rem;
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(transparent, white);
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    width: 55vw;
+    padding: 0;
+    align-self: flex-end;
+  }
+  @media screen and (min-width: 1024px) {
+    padding-bottom: 2rem;
+    // max-width: 600px;
+    max-width: 350px;
+  }
 }
 
 .image {

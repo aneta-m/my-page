@@ -27,3 +27,44 @@
     color: white;
   }
 }
+
+.dropdown {
+  border: none;
+  background-color: white;
+  color: $dark;
+  position: relative;
+  cursor: pointer;
+  transition: 0.2s all ease;
+  padding: 0.5rem 2rem 0.5rem 1rem;
+  width: 100%;
+  .icon {
+    position: absolute;
+    padding-left: 0.5rem;
+    left: 50%;
+    font-size: 1.1rem;
+  }
+  @media (min-width: 768px) {
+    width: auto;
+    .icon {
+      left: auto;
+      right: 0.5rem;
+      display: block;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: 0.2s all ease;
+    }
+  }
+  &:hover {
+    .icon {
+      color: $grey;
+    }
+  }
+}
+
+.dropdown_list {
+  @extend .dropdown;
+  border-top: 1px solid $primary;
+  &:hover {
+    background-color: $primary;
+  }
+}

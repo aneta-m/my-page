@@ -6,10 +6,18 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.links}>
-          <a className={styles.link} href="https://www.onet.pl">
+          <a
+            className={styles.link}
+            href="https://www.onet.pl"
+            aria-label="linkedin profile"
+          >
             <i className="fa-brands fa-linkedin"></i>
           </a>
-          <a className={styles.link} href="https://www.onet.pl">
+          <a
+            className={styles.link}
+            href="https://www.onet.pl"
+            aria-label="github profile"
+          >
             <i className="fa-brands fa-github"></i>
           </a>
         </div>

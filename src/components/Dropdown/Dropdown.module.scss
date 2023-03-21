@@ -1,0 +1,18 @@
+@import "../../styles/main.scss";
+
+.dropdown {
+  position: relative;
+}
+
+.select_hidden {
+  display: none;
+}
+
+.select_list {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+}

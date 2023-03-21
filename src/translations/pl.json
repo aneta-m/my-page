@@ -1,0 +1,56 @@
+{
+  "nav": {
+    "about": "O mnie",
+    "projects": "Projekty",
+    "contact": "Kontakt"
+  },
+  "header": {
+    "contact_button": "Napisz do mnie",
+    "cv_button": "Zobacz CV"
+  },
+  "about": {
+    "title": "O mnie",
+    "description": {
+      "p_1": "Jestem front-end developerem ze znajomością React, TypeScript, JavaScript, HTML i CSS.",
+      "p_2": "Chętnie uczę się nowych rzeczy i pragnę się rozwijać jako programista.",
+      "p_3": "Moim celem jest pisanie czytelnego kodu, który spełnia aktualne wytyczne i jest zweryfikowany testami. Ważne są dla mnie również zagadnienia związane z dostępnością aplikacji webowych dla wszystkich użytkowników."
+    },
+    "subtitle": "Narzędzia i Technologie:"
+  },
+  "projects": {
+    "title": "Projekty",
+    "project_1": {
+      "title": "Kalkulator obrazkowy",
+      "desc": "Aplikacja dla dzieci, która przy pomocy obrazków z jabłkami przedstawia podstawowe operacje matematyczne. Pozwala dzieciom na przyjemne i interaktywne poznawanie i naukę dodawania, odejmowania, mnożenia i dzielenia.",
+      "list": {
+        "item_1": "zbudowana przy użyciu React i TypeScript",
+        "item_2": "style w SCSS modules",
+        "item_3": "testowana w Jest i React Testing Library",
+        "item_4": "responsywna, mobile first"
+      },
+      "button_1": "Uruchom",
+      "button_2": "Zobacz kod"
+    },
+    "project_2": {
+      "title": "Ta strona",
+      "desc": "Strona portfolio zaprojektowana jako Single Page Website. Witryna posiada formularz kontaktowy z napisaną przeze mnie walidacją oraz pozwala na wybór języka, który pozostaje zapisany w lokalnej pamięci przeglądarki (local storage).",
+      "list": {
+        "item_1": "zbudowana przy użyciu React i Typescript",
+        "item_2": "użycie Context API do zmiany języka",
+        "item_3": "style w SCSS modules",
+        "item_4": "testy jednostkowe i integracyjne w Jest i React Testing Library",
+        "item_5": "responsywna, mobile first"
+      },
+      "button_1": "Zobacz kod"
+    }
+  },
+  "contact": {
+    "title": "Napisz do mnie",
+    "form": {
+      "name": "Imię",
+      "email": "Email",
+      "message": "Wiadomość",
+      "submit": "Wyślij"
+    }
+  }
+}

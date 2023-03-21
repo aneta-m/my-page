@@ -3,9 +3,17 @@
 .form {
   display: grid;
   grid-template-areas:
-    "a b"
-    "c c"
-    "d d";
+    "a"
+    "b"
+    "c"
+    "d";
+  @media screen and (min-width: 768px) {
+    grid-template-areas:
+      "a b"
+      "c c"
+      "d d";
+  }
+
   gap: 1rem;
 
   & > :first-child {

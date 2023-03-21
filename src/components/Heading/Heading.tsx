@@ -21,11 +21,11 @@ const Heading = ({
     );
   }
   if (type === "title") {
-    return <h2 className={`${styles.heading} ${styles.title}`}>{children}</h2>;
+    return <h3 className={`${styles.heading} ${styles.title}`}>{children}</h3>;
   }
   if (type === "title_center") {
     return (
-      <h2 className={`${styles.heading} ${styles.title_center}`}>{children}</h2>
+      <h3 className={`${styles.heading} ${styles.title_center}`}>{children}</h3>
     );
   } else {
     return <h1 className={`${styles.heading} ${styles.main}`}>{children}</h1>;

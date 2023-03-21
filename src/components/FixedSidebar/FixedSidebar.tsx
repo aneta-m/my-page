@@ -4,12 +4,26 @@ import styles from "./FixedSidebar.module.scss";
 const FixedSidebar = () => {
   return (
     <div className={styles.sidebar}>
-      <a className={styles.link} href="https://www.onet.pl">
-        <i className={`fa-brands fa-linkedin-in ${styles.icon}`}></i>
-      </a>
-      <a className={styles.link} href="https://www.onet.pl">
-        <i className={`fa-brands fa-github ${styles.icon}`}></i>
-      </a>
+      <ul>
+        <li>
+          <a
+            className={styles.link}
+            href="https://www.onet.pl"
+            aria-label="linkedin profile"
+          >
+            <i className={`fa-brands fa-linkedin-in ${styles.icon}`}></i>
+          </a>
+        </li>
+        <li>
+          <a
+            className={styles.link}
+            href="https://www.onet.pl"
+            aria-label="github profile"
+          >
+            <i className={`fa-brands fa-github ${styles.icon}`}></i>
+          </a>
+        </li>
+      </ul>
     </div>
   );
 };

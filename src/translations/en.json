@@ -1,0 +1,57 @@
+{
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "header": {
+    "contact_button": "Contact me",
+    "cv_button": "Get my CV"
+  },
+  "about": {
+    "title": "About",
+    "description": {
+      "p_1": "I am a front-end developer with knowledge of React, TypeScript, JavaScript, HTML and CSS.",
+      "p_2": "I enjoy learning new things and strive to enhance my skills as a programmer.",
+      "p_3": "My goal is to write clean code that complies with current recommendations and is verified with tests.",
+      "p_4": "The accessibility of web appliactions for all users is also very important to me."
+    },
+    "subtitle": "Proficient Tools and Technologies:"
+  },
+  "projects": {
+    "title": "Projects",
+    "project_1": {
+      "title": "Visual Calculator",
+      "desc": "An app for kids that uses pictures of apples to represent basic mathematical operations. It allows children to enjoyably and interactively learn and understand addition, subtraction, multiplication, and division.",
+      "list": {
+        "item_1": "developed with React and TypeScript",
+        "item_2": "styled with SCSS modules",
+        "item_3": "tested with Jest and React Testing Library",
+        "item_4": "responsive, mobile first"
+      },
+      "button_1": "Play with App",
+      "button_2": "Get code"
+    },
+    "project_2": {
+      "title": "This website",
+      "desc": "Portfolio website designed as a Single Page Website. The site features a custom contact form with my own validation implementation and allows for language selection, which is saved in local storage.",
+      "list": {
+        "item_1": "developed with React and TypeScript",
+        "item_2": "use of Context API for switching between different languages",
+        "item_3": "styled with SCSS modules",
+        "item_4": "unit and integration tests in Jest and React Testing Library",
+        "item_5": "responsive, mobile first"
+      },
+      "button_1": "Get code"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Submit"
+    }
+  }
+}

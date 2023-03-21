@@ -3,8 +3,10 @@ import styles from "./Header.module.scss";
 import photo from "../../assets/images/photo.png";
 import Heading from "../Heading/Heading";
 import Button from "../Button/Button";
+import useTranslation from "../../hooks/useTranslation";
 
-const Header = () => {
+const Header = ({ onClick }: { onClick: (sectionId: string) => void }) => {
+  const t = useTranslation();
   return (
     <section className={styles.header} id="header">
       <div className={styles.flex_container}>
@@ -12,9 +14,11 @@ const Header = () => {
           <Heading type="main">Aneta Miatkowska</Heading>
           <Heading type="subheading">Front end developer</Heading>
           <div className={styles.buttons}>
-            <Button onClick={() => console.log("send")}>Contact me</Button>
-            <Button onClick={() => console.log("get cv")} color="light">
-              Get my CV
+            <Button onClick={() => onClick("contact")}>
+              {t.header.contact_button}
+            </Button>
+            <Button link="https://www.onet.pl" color="light">
+              {t.header.cv_button}
             </Button>
           </div>
         </div>

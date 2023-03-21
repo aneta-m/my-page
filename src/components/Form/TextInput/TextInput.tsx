@@ -13,14 +13,14 @@ const TextInput = ({
 }: {
   fieldName: string;
   value: string;
-  focus: boolean;
+  focus?: boolean;
   onBlur:
     | React.FocusEventHandler<HTMLInputElement>
     | React.FocusEventHandler<HTMLTextAreaElement>;
   onChange:
     | React.ChangeEventHandler<HTMLInputElement>
     | React.ChangeEventHandler<HTMLTextAreaElement>;
-  label?: string;
+  label: string;
   textarea?: boolean;
   error: string | null;
 }) => {
@@ -34,6 +34,7 @@ const TextInput = ({
   const formElement = textarea ? (
     <textarea
       name={fieldName}
+      id={fieldName}
       rows={7}
       value={value}
       onChange={onChange as React.ChangeEventHandler<HTMLTextAreaElement>}
@@ -44,6 +45,7 @@ const TextInput = ({
   ) : (
     <input
       name={fieldName}
+      id={fieldName}
       value={value}
       onChange={onChange as React.ChangeEventHandler<HTMLInputElement>}
       className={styles.input}
@@ -59,14 +61,9 @@ const TextInput = ({
 
   return (
     <div>
-      {" "}
-      {label ? (
-        <label className={styles.label} htmlFor={fieldName}>
-          {label} {formElement}
-        </label>
-      ) : (
-        formElement
-      )}
+      <label className={styles.label} htmlFor={fieldName}>
+        {label} {formElement}
+      </label>
       {errorWarning}
     </div>
   );

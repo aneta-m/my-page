@@ -3,18 +3,13 @@ import styles from "./NavButton.module.scss";
 
 const NavButton = ({
   onClick,
-  sectionId,
   children,
 }: {
-  onClick: { (sectionId: string): void };
-  sectionId: string;
+  onClick: { (): void };
   children: string;
 }) => {
-  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) =>
-    onClick(sectionId);
-
   return (
-    <button className={styles.button} onClick={handleClick}>
+    <button className={styles.button} onClick={onClick}>
       {children}
     </button>
   );

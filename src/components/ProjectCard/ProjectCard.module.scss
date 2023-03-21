@@ -1,19 +1,27 @@
 @import "../../styles/main.scss";
 
 .flex {
-  display: flex;
-  & > *:first-child {
-    width: 40%;
+  padding-bottom: 2.5rem;
+
+  @media (min-width: 768px) {
+    display: flex;
+    padding-bottom: 4rem;
+
+    & > *:first-child {
+      width: 40%;
+    }
+    & > *:nth-child(2) {
+      width: 60%;
+    }
   }
-  & > *:nth-child(2) {
-    width: 60%;
-  }
-  padding-bottom: 4rem;
 }
 
 .media_container {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 2rem;
+  padding-top: 2rem;
+  @media (min-width: 768px) {
+    padding: 0 0 0 2rem;
+  }
 }

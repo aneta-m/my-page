@@ -1,14 +1,21 @@
 @import "../../styles/main.scss";
 
 .card {
-  background-color: white;
-  border-radius: 1rem;
-  box-shadow: 2px 0 6px grey;
-  max-width: $container-size-s;
-  margin: auto;
   padding: 2rem;
-}
 
+  @media screen and (min-width: 768px) {
+    background-color: white;
+  }
+  @media screen and (min-width: 1024px) {
+    border-radius: 1rem;
+    box-shadow: 2px 0 6px grey;
+    max-width: 1000px;
+    margin: auto;
+  }
+  @media screen and (min-width: 1280px) {
+    max-width: $container-size-s;
+  }
+}
 .simple {
   box-shadow: none;
   border-radius: 0;

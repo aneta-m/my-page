@@ -1,7 +1,7 @@
 .list_item {
   display: grid;
   grid-template-columns: 2rem 1fr;
-  //   align-items: center;
+  align-items: center;
   margin-bottom: 0.5rem;
   margin-left: 30%;
   transform: translateX(-20%);
@@ -10,6 +10,10 @@
 .img {
   width: 21px;
   border-radius: 2px;
+  &_top {
+    align-self: start;
+    padding-top: 3px;
+  }
 }
 
 .icon {

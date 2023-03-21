@@ -1,5 +1,8 @@
 @import "./styles/main.scss";
 
 .app {
-  background-image: linear-gradient(90deg, white 60%, $primary 40%);
+  background-color: white;
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(90deg, white 60%, $primary 40%);
+  }
 }

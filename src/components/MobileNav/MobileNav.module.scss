@@ -1,0 +1,44 @@
+@import "../../styles/main.scss";
+
+.mobile_nav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 5;
+  right: 0;
+  top: 0;
+  background-color: white;
+  overflow: hidden;
+  transition: 0.5s;
+  &_open {
+    width: 100%;
+  }
+}
+
+.mobile_nav_list {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  top: 25%;
+}
+
+.logo {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.toggle_button {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  border: none;
+  color: $dark;
+  background-color: transparent;
+  z-index: 1;
+  &:hover {
+    color: $grey;
+  }
+}

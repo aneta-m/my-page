@@ -2,7 +2,11 @@
 
 .projects_section {
   background-color: white;
-  padding: 2rem 0;
+  padding: 2rem;
+
+  @media screen and (min-width: 1264px) {
+    padding: 2rem 0;
+  }
 }
 
 .projects {

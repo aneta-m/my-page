@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Header.module.scss";
-import photo from "../../assets/images/photo.png";
+import photo from "../../assets/images/photo4.jpg";
 import Heading from "../Heading/Heading";
 import Button from "../Button/Button";
 import useTranslation from "../../hooks/useTranslation";
@@ -17,7 +17,10 @@ const Header = ({ onClick }: { onClick: (sectionId: string) => void }) => {
             <Button onClick={() => onClick("contact")}>
               {t.header.contact_button}
             </Button>
-            <Button link="https://www.onet.pl" color="light">
+            <Button
+              link="https://www.linkedin.com/in/aneta-miatkowska/"
+              color="light"
+            >
               {t.header.cv_button}
             </Button>
           </div>

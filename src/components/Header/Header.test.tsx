@@ -19,7 +19,7 @@ describe("Header", () => {
     render(<Header onClick={navigateToSectionMock} />);
     expect(screen.getByRole("link", { name: /cv/i })).toHaveAttribute(
       "href",
-      "https://www.onet.pl"
+      "https://www.linkedin.com/in/aneta-miatkowska/"
     );
   });
 });

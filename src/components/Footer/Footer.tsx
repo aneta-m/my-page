@@ -8,14 +8,18 @@ const Footer = () => {
         <div className={styles.links}>
           <a
             className={styles.link}
-            href="https://www.onet.pl"
+            href="https://www.linkedin.com/in/aneta-miatkowska/"
+            target="_blank"
+            rel="noreferrer"
             aria-label="linkedin profile"
           >
             <i className="fa-brands fa-linkedin"></i>
           </a>
           <a
             className={styles.link}
-            href="https://www.onet.pl"
+            href="https://github.com/aneta-m"
+            target="_blank"
+            rel="noreferrer"
             aria-label="github profile"
           >
             <i className="fa-brands fa-github"></i>

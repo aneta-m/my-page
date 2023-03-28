@@ -13,7 +13,9 @@ describe("FixedSidebar component", () => {
     render(<FixedSidebar />);
     const linkedinLink = screen.getByLabelText(/linkedin profile/i);
     const githubLink = screen.getByLabelText(/github profile/i);
-    expect(linkedinLink.getAttribute("href")).toBe("https://www.onet.pl");
-    expect(githubLink.getAttribute("href")).toBe("https://www.onet.pl");
+    expect(linkedinLink.getAttribute("href")).toBe(
+      "https://www.linkedin.com/in/aneta-miatkowska/"
+    );
+    expect(githubLink.getAttribute("href")).toBe("https://github.com/aneta-m");
   });
 });

@@ -27,6 +27,8 @@ const Button = ({
     ) : (
       <a
         href={link}
+        target="_blank"
+        rel="noreferrer"
         className={`${styles.button} ${
           color === "light" ? styles.light : styles.dark
         }`}

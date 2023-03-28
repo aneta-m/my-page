@@ -10,7 +10,7 @@
     position: relative;
     margin: auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     max-width: $container-size-s;
   }
 }
@@ -26,6 +26,7 @@
     bottom: 0;
     left: 0;
     z-index: 0;
+    padding-left: 2rem;
   }
 }
 
@@ -37,9 +38,6 @@
 }
 
 .image_wrapper {
-  padding-left: 20vw;
-  padding-right: 5vw;
-  padding-top: 4rem;
   &::after {
     display: block;
     content: "";
@@ -55,13 +53,11 @@
   }
   @media screen and (min-width: 768px) {
     width: 55vw;
-    padding: 0;
     align-self: flex-end;
   }
   @media screen and (min-width: 1024px) {
     padding-bottom: 2rem;
-    // max-width: 600px;
-    max-width: 350px;
+    max-width: 700px;
   }
 }
 

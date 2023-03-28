@@ -5,7 +5,7 @@ import Heading from "../Heading/Heading";
 import Video from "../Video/Video";
 import Image from "../Image/Image";
 import useTranslation from "../../hooks/useTranslation";
-import site from "../../assets/images/site.jpg";
+import site from "../../assets/images/site.png";
 
 const Projects = () => {
   const t = useTranslation();
@@ -26,8 +26,11 @@ const Projects = () => {
         t.projects.project_1.list.item_4,
       ],
       links: [
-        { name: t.projects.project_1.button_1, url: "https://www.onet.pl" },
-        { name: t.projects.project_1.button_2, url: "https://www.github.com" },
+        { name: t.projects.project_1.button_1, url: "/calculator" },
+        {
+          name: t.projects.project_1.button_2,
+          url: "https://github.com/aneta-m/kids-calculator",
+        },
       ],
       media: (
         <Video
@@ -50,7 +53,7 @@ const Projects = () => {
       ],
       links: {
         name: t.projects.project_2.button_1,
-        url: "https://www.github.com",
+        url: "https://github.com/aneta-m/my-page",
       },
       media: <Image src={site} alt="website screenshots different sizes" />,
     },

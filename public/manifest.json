@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Portfolio",
+  "name": "My portfolio website created with React and TypeScript",
   "icons": [
     {
       "src": "favicon.ico",
